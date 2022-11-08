@@ -41,9 +41,9 @@ build:
 			--file Makefile.docker-bake.hcl \
 			--load build
 
-# push:
-# 	@echo Pushing ${DOCKER_IMAGE_TAG} to registry
-# 	@docker push ${DOCKER_IMAGE_TAG}
+push:
+	@echo Pushing ${DOCKER_IMAGE_TAG} to registry
+	@docker push ${DOCKER_IMAGE_TAG}
 
 run:
 	@echo Running ${DOCKER_IMAGE_TAG} image on port http://localhost:8090
