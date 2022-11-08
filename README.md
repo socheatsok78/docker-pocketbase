@@ -29,6 +29,17 @@ $ docker run --rm mplatform/mquery socheatsok78/pocketbase:latest
 Running the container:
 ```
 $ docker run --name pocketbase -v $(pwd)/pocketbase:/opt/pocketbase -d ghcr.io/socheatsok78/pocketbase
+
+  ____            _        _   ____
+ |  _ \ ___   ___| | _____| |_| __ )  __ _ ___  ___
+ | |_) / _ \ / __| |/ / _ \ __|  _ \ / _` / __|/ _ \
+ |  __/ (_) | (__|   <  __/ |_| |_) | (_| \__ \  __/
+ |_|   \___/ \___|_|\_\___|\__|____/ \__,_|___/\___|
+
++ pocketbase serve --encryptionEnv=PB_ENCRYPTION_KEY --dir=/opt/pocketbase --http=0.0.0.0:8090
+> Server started at: http://0.0.0.0:8090
+  - REST API: http://0.0.0.0:8090/api/
+  - Admin UI: http://0.0.0.0:8090/_/
 ```
 
 ## Environment Variables
