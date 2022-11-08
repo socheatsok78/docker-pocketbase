@@ -26,8 +26,19 @@ $ docker run --rm mplatform/mquery pocketbase/pocketbase:latest
 
 ## How to use this image
 
+Running the container:
 ```
 $ docker run --name pocketbase -v $(pwd)/pocketbase:/opt/pocketbase -d pocketbase/pocketbase
+```
+
+## Environment Variables
+
+```
+PB_HOST=0.0.0.0
+PB_PORT=8090
+PB_DATA_DIR=/opt/pocketbase
+PB_DEBUG=
+PB_ENCRYPTION_KEY=kHyRfPRyLOFr0VPsDytT4cXNGVA1vE7e
 ```
 
 ## License
