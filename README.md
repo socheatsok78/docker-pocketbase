@@ -48,6 +48,26 @@ $ docker run --name pocketbase -v $(pwd)/pocketbase:/opt/pocketbase -d ghcr.io/s
   - Admin UI: http://0.0.0.0:8090/_/
 ```
 
+PocketBase will store your application data and settings to `/opt/pocketbase` directory.
+
+If `/var/pocketbase/public` directory exists, serves the static content from it (html, css, images, etc.)
+
+And that's it! A web server will be started with the following routes:
+
+```
+- Web Public: http://0.0.0.0:8090
+- REST API: http://0.0.0.0:8090/api/
+- Admin UI: http://0.0.0.0:8090/_/
+```
+
+## Enable settings encryption
+
+By default, PocketBase stores the applications settings in the database as plain JSON text, including the secret keys for the OAuth2 clients and the SMTP password.
+
+While this is not a security issue on its own (PocketBase applications live entirely on a single server and its expected only authorized users to have access to your server and application data), in some situations it may be a good idea to store the settings encrypted in case someone get their hands on your database file (eg. from an external stored backup).
+
+To store your PocketBase settings encrypted set `PB_ENCRYPTION_KEY` environment variable a random 32 characters string as its value.
+
 ## Environment Variables
 
 ```env
