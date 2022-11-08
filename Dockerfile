@@ -14,8 +14,10 @@ ARG POCKETBASE_VERSION=0.7.10
 ARG POCKETBASE_RELEASE_URL=https://github.com/pocketbase/pocketbase/releases/download
 ADD ${POCKETBASE_RELEASE_URL}/v${POCKETBASE_VERSION}/pocketbase_${POCKETBASE_VERSION}_${TARGETOS}_${TARGETARCH}.zip /tmp/pocketbase.zip
 RUN apk add --no-cache unzip \
-    && cd /tmp && unzip /tmp/pocketbase.zip \
-    && cp pocketbase /usr/bin/pocketbase
+    && mkdir -p /tmp/pocketbase \
+    && cd /tmp && unzip /tmp/pocketbase.zip -d /tmp/pocketbase \
+    && cp /tmp/pocketbase/pocketbase /usr/bin/pocketbase \
+    && rm -rf /tmp/pocketbase /tmp/pocketbase.zip
 
 ENV PB_HOST=0.0.0.0
 ENV PB_PORT=8090
