@@ -17,7 +17,8 @@ if [[ -n "${PB_ENCRYPTION_KEY}" ]]; then
 fi
 
 # Print logo
-cat /var/pocketbase/banner; echo
+cat /var/pocketbase/banner
+echo -e "\n $(pocketbase --version)\n"
 
 set -x
 pocketbase serve ${POCKETBASE_FLAGS[@]} \
