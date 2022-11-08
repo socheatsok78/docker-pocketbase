@@ -70,6 +70,8 @@ To store your PocketBase settings encrypted set `PB_ENCRYPTION_KEY` environment 
 
 ## Environment Variables
 
+You can customize the container by set any of the following environment variables.
+
 ```env
 # enable debug mode, aka. showing more detailed logs (default false)
 PB_DEBUG=
