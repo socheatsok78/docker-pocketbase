@@ -24,8 +24,8 @@ ENV PB_DEBUG=
 ENV PB_ENCRYPTION_KEY=kHyRfPRyLOFr0VPsDytT4cXNGVA1vE7e
 
 EXPOSE ${PB_PORT}
-VOLUME [ "${PB_DATA_DIR}" ]
+VOLUME ["${PB_DATA_DIR}"]
 
-COPY entrypoint.sh /entrypoint.sh
+ADD rootfs /
 RUN chmod +x /entrypoint.sh
 CMD [ "/entrypoint.sh" ]

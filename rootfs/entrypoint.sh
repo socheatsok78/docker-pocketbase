@@ -16,6 +16,9 @@ if [[ -n "${PB_ENCRYPTION_KEY}" ]]; then
     POCKETBASE_FLAGS+=('--encryptionEnv=PB_ENCRYPTION_KEY')
 fi
 
+# Print logo
+cat /var/pocketbase/banner; echo
+
 set -x
 pocketbase serve ${POCKETBASE_FLAGS[@]} \
     --dir="${PB_DATA_DIR}" \
