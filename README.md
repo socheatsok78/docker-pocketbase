@@ -12,13 +12,13 @@ Docker Image for [PocketBase](https://github.com/pocketbase/pocketbase).
 
 | Registry                | Image                             |
 | ----------------------- | --------------------------------- |
-| Docker Hub              | `docker.io/pocketbase/pocketbase` |
-| GitHub Package Registry | `ghcr.io/pocketbase/pocketbase`   |
+| Docker Hub              | `docker.io/socheatsok78/pocketbase` |
+| GitHub Package Registry | `ghcr.io/socheatsok78/pocketbase`   |
 
 Following platforms for this image are available:
 
 ```
-$ docker run --rm mplatform/mquery pocketbase/pocketbase:latest
+$ docker run --rm mplatform/mquery socheatsok78/pocketbase:latest
 * Supported platforms:
    - linux/amd64
    - linux/arm64
@@ -28,7 +28,7 @@ $ docker run --rm mplatform/mquery pocketbase/pocketbase:latest
 
 Running the container:
 ```
-$ docker run --name pocketbase -v $(pwd)/pocketbase:/opt/pocketbase -d pocketbase/pocketbase
+$ docker run --name pocketbase -v $(pwd)/pocketbase:/opt/pocketbase -d ghcr.io/socheatsok78/pocketbase
 ```
 
 ## Environment Variables
