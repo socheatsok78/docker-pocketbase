@@ -5,11 +5,6 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/socheatsok78/docker-pocketbase/actions/workflows/build.yml">
-        <img alt="build" src="https://github.com/socheatsok78/docker-pocketbase/actions/workflows/build.yml/badge.svg" />
-    </a>
-</p>
-<p align="center">
     An unofficial Docker Image for <a href="https://github.com/pocketbase/pocketbase">PocketBase</a>
 </p>
 
@@ -23,10 +18,10 @@ What's in this Docker Image?
 
 ## Image
 
-| Registry                                                                                               | Image                               |
-| ------------------------------------------------------------------------------------------------------ | ----------------------------------- |
-| [Docker Hub](https://hub.docker.com/r/socheatsok78/pocketbase)                                         | `docker.io/socheatsok78/pocketbase` |
-| [GitHub Package Registry](https://github.com/socheatsok78/docker-pocketbase/pkgs/container/pocketbase) | `ghcr.io/socheatsok78/pocketbase`   |
+| Registry                                                                                               | Image                               | Status                                                               |
+| ------------------------------------------------------------------------------------------------------ | ----------------------------------- | -------------------------------------------------------------------- |
+| [Docker Hub](https://hub.docker.com/r/socheatsok78/pocketbase)                                         | `docker.io/socheatsok78/pocketbase` | [![Docker Hub][badge-docker-hub]][workflows-docker-hub]              |
+| [GitHub Package Registry](https://github.com/socheatsok78/docker-pocketbase/pkgs/container/pocketbase) | `ghcr.io/socheatsok78/pocketbase`   | [![GitHub Package Registry][badge-github-pkg]][workflows-github-pkg] |
 
 Following platforms for this image are available:
 
@@ -114,3 +109,8 @@ As an alternative to passing sensitive information via environment variables, `_
 ## License
 
 Licensed under the [MIT](LICENSE).
+
+[badge-docker-hub]: https://github.com/socheatsok78/docker-pocketbase/actions/workflows/docker-hub.yml/badge.svg
+[workflows-docker-hub]: https://github.com/socheatsok78/docker-pocketbase/actions/workflows/docker-hub.yml
+[badge-github-pkg]: https://github.com/socheatsok78/docker-pocketbase/actions/workflows/github-pkg.yml/badge.svg
+[workflows-github-pkg]: https://github.com/socheatsok78/docker-pocketbase/actions/workflows/github-pkg.yml
