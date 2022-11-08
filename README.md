@@ -4,9 +4,14 @@
     </a>
 </p>
 
-## About
-
-Docker Image for [PocketBase](https://github.com/pocketbase/pocketbase).
+<p align="center">
+    <a href="https://github.com/socheatsok78/docker-pocketbase/actions/workflows/build.yml">
+        <img alt="build" src="https://github.com/socheatsok78/docker-pocketbase/actions/workflows/build.yml/badge.svg" />
+    </a>
+</p>
+<p align="center">
+    An unofficial Docker Image for <a href="https://github.com/pocketbase/pocketbase">PocketBase</a>
+</p>
 
 ## Image
 
