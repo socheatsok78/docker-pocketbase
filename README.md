@@ -36,6 +36,8 @@ $ docker run --name pocketbase -v $(pwd)/pocketbase:/opt/pocketbase -d ghcr.io/s
  |  __/ (_) | (__|   <  __/ |_| |_) | (_| \__ \  __/
  |_|   \___/ \___|_|\_\___|\__|____/ \__,_|___/\___|
 
+ pocketbase version 0.7.10
+
 + pocketbase serve --encryptionEnv=PB_ENCRYPTION_KEY --dir=/opt/pocketbase --http=0.0.0.0:8090
 > Server started at: http://0.0.0.0:8090
   - REST API: http://0.0.0.0:8090/api/
