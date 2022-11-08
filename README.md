@@ -35,6 +35,14 @@ Image: socheatsok78/pocketbase:main (digest: sha256:ecae74e29a6edfb0baf7e5a8ca62
    - linux/arm64
 ```
 
+### Supported tags
+
+- `latest`, `main`
+
+**Releases**
+
+- `0.7.10`
+
 ## How to use this image
 
 Running the container:
