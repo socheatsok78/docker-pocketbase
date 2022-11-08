@@ -10,7 +10,10 @@ ARG TARGETOS
 ARG TARGETARCH
 ARG TARGETVARIANT
 
-ARG POCKETBASE_VERSION=0.7.10
+# DO NOT MODIFY
+# This POCKETBASE_VERSION is required
+# You can change the default value from in docker-bake.hcl
+ARG POCKETBASE_VERSION
 ARG POCKETBASE_RELEASE_URL=https://github.com/pocketbase/pocketbase/releases/download
 ADD ${POCKETBASE_RELEASE_URL}/v${POCKETBASE_VERSION}/pocketbase_${POCKETBASE_VERSION}_${TARGETOS}_${TARGETARCH}.zip /tmp/pocketbase.zip
 RUN apk add --no-cache unzip \
