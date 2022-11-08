@@ -10,10 +10,10 @@ Docker Image for [PocketBase](https://github.com/pocketbase/pocketbase).
 
 ## Image
 
-| Registry                | Image                             |
-| ----------------------- | --------------------------------- |
-| Docker Hub              | `docker.io/socheatsok78/pocketbase` |
-| GitHub Package Registry | `ghcr.io/socheatsok78/pocketbase`   |
+| Registry                                                                                               | Image                               |
+| ------------------------------------------------------------------------------------------------------ | ----------------------------------- |
+| [Docker Hub](https://hub.docker.com/r/socheatsok78/pocketbase)                                         | `docker.io/socheatsok78/pocketbase` |
+| [GitHub Package Registry](https://github.com/socheatsok78/docker-pocketbase/pkgs/container/pocketbase) | `ghcr.io/socheatsok78/pocketbase`   |
 
 Following platforms for this image are available:
 
@@ -30,6 +30,7 @@ Image: socheatsok78/pocketbase:main (digest: sha256:ecae74e29a6edfb0baf7e5a8ca62
 ## How to use this image
 
 Running the container:
+
 ```
 $ docker run --name pocketbase -v $(pwd)/pocketbase:/opt/pocketbase -d ghcr.io/socheatsok78/pocketbase
 
@@ -66,7 +67,7 @@ PB_DATA_DIR=/opt/pocketbase
 # the directory to serve static files (default "/var/pocketbase/public")
 PB_PUBLIC_DIR=/var/pocketbase/public
 
-# the env variable whose value of 32 characters will be used 
+# the env variable whose value of 32 characters will be used
 # as encryption key for the app settings (default none)
 PB_ENCRYPTION_KEY=kHyRfPRyLOFr0VPsDytT4cXNGVA1vE7e
 ```
