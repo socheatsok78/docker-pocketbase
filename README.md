@@ -12,7 +12,7 @@ Docker Image for [PocketBase](https://github.com/pocketbase/pocketbase).
 
 | Registry                | Image                             |
 | ----------------------- | --------------------------------- |
-| [Docker Hub]            | `docker.io/pocketbase/pocketbase` |
+| Docker Hub              | `docker.io/pocketbase/pocketbase` |
 | GitHub Package Registry | `ghcr.io/pocketbase/pocketbase`   |
 
 Following platforms for this image are available:

@@ -1,12 +1,11 @@
 target "docker-metadata-action" {}
-target "github-metadata-action" {}
 
-target "build" {
-  inherits = ["docker-metadata-action", "github-metadata-action"]
+target "pocketbase" {
+  inherits = ["docker-metadata-action"]
   context = "./"
   dockerfile = "Dockerfile"
   platforms = [
     "linux/amd64",
-    # "linux/arm64"
+    "linux/arm64"
   ]
 }
