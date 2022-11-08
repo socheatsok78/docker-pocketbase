@@ -94,6 +94,10 @@ PB_PUBLIC_DIR=/var/pocketbase/public
 PB_ENCRYPTION_KEY=kHyRfPRyLOFr0VPsDytT4cXNGVA1vE7e
 ```
 
+## Docker Secrets
+
+As an alternative to passing sensitive information via environment variables, `_FILE` may be appended to the `PB_ENCRYPTION_KEY` variable, causing the initialization script to load the values for those variables from files present in the container. In particular, this can be used to load passwords from Docker secrets stored in `/run/secrets/<secret_name>`.
+
 ## License
 
 Licensed under the [MIT](LICENSE).
