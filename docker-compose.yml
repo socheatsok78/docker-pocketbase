@@ -1,0 +1,12 @@
+volumes:
+  pocketbase-data: {}
+
+services:
+  pocketbase:
+    image: pocketbase/pocketbase:edge
+    ports:
+      - 8090:8090
+    environment:
+      PB_ENCRYPTION_KEY: "ZWNhZTc0ZTI5YTZlZGZiMGJhZjdlNWE4"
+    volumes:
+      - pocketbase-data:/opt/pocketbase
