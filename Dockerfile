@@ -22,11 +22,13 @@ RUN apk add --no-cache unzip \
     && cp /tmp/pocketbase/pocketbase /usr/bin/pocketbase \
     && rm -rf /tmp/pocketbase /tmp/pocketbase.zip
 
+ENV PB_DEBUG=
 ENV PB_HOST=0.0.0.0
 ENV PB_PORT=8090
+ENV PB_CORS=
 ENV PB_DATA_DIR=/opt/pocketbase
-ENV PB_DEBUG=
-ENV PB_ENCRYPTION_KEY=kHyRfPRyLOFr0VPsDytT4cXNGVA1vE7e
+ENV PB_PUBLIC_DIR=/var/pocketbase/public
+ENV PB_ENCRYPTION_KEY=
 
 EXPOSE ${PB_PORT}
 VOLUME ["${PB_DATA_DIR}"]

@@ -49,11 +49,25 @@ $ docker run --name pocketbase -v $(pwd)/pocketbase:/opt/pocketbase -d ghcr.io/s
 
 ## Environment Variables
 
-```
+```env
+# enable debug mode, aka. showing more detailed logs (default false)
+PB_DEBUG=
+
+# api HTTP server address (default "0.0.0.0:8090")
 PB_HOST=0.0.0.0
 PB_PORT=8090
+
+# CORS allowed domain origins list (default [*])
+PB_CORS=
+
+# the directory to store PocketBase data (default "/opt/pocketbase")
 PB_DATA_DIR=/opt/pocketbase
-PB_DEBUG=
+
+# the directory to serve static files (default "/var/pocketbase/public")
+PB_PUBLIC_DIR=/var/pocketbase/public
+
+# the env variable whose value of 32 characters will be used 
+# as encryption key for the app settings (default none)
 PB_ENCRYPTION_KEY=kHyRfPRyLOFr0VPsDytT4cXNGVA1vE7e
 ```
 
