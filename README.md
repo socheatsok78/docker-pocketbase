@@ -18,8 +18,11 @@ Docker Image for [PocketBase](https://github.com/pocketbase/pocketbase).
 Following platforms for this image are available:
 
 ```
-$ docker run --rm mplatform/mquery socheatsok78/pocketbase:latest
-* Supported platforms:
+$ docker run --rm mplatform/mquery socheatsok78/pocketbase:main
+
+Image: socheatsok78/pocketbase:main (digest: sha256:ecae74e29a6edfb0baf7e5a8ca625ceaadaacbf745af7724a97f6d6aaff168a3)
+ * Manifest List: Yes (Image type: application/vnd.docker.distribution.manifest.list.v2+json)
+ * Supported platforms:
    - linux/amd64
    - linux/arm64
 ```
