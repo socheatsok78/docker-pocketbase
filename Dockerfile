@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --no-cache bash tini
+RUN apk add --no-cache bash tini ca-certificates
 ENTRYPOINT ["/sbin/tini", "--"]
 
 # Automatic platform ARGs
