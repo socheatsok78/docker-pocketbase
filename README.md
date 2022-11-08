@@ -13,6 +13,14 @@
     An unofficial Docker Image for <a href="https://github.com/pocketbase/pocketbase">PocketBase</a>
 </p>
 
+## Overview
+
+What's in this Docker Image?
+
+- using `alpine:latest` base image
+- customize the container via **Environment Variables**
+- support for **Docker Secret**
+
 ## Image
 
 | Registry                                                                                               | Image                               |
@@ -75,7 +83,7 @@ To store your PocketBase settings encrypted set `PB_ENCRYPTION_KEY` environment 
 
 ## Environment Variables
 
-You can customize the container by set any of the following environment variables.
+You can customize the container by setting any of the following environment variables.
 
 ```env
 # enable debug mode, aka. showing more detailed logs (default false)
