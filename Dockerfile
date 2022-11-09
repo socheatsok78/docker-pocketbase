@@ -1,7 +1,4 @@
-FROM alpine:latest
-
-RUN apk add --no-cache bash tini ca-certificates
-ENTRYPOINT ["/sbin/tini", "--"]
+FROM alpine:latest as pocketbase
 
 # Automatic platform ARGs
 # This feature is only available when using the BuildKit backend.
@@ -20,7 +17,13 @@ RUN apk add --no-cache unzip \
     && mkdir -p /tmp/pocketbase \
     && cd /tmp && unzip /tmp/pocketbase.zip -d /tmp/pocketbase \
     && cp /tmp/pocketbase/pocketbase /usr/bin/pocketbase \
-    && rm -rf /tmp/pocketbase /tmp/pocketbase.zip
+    && rm -rf /tmp/pocketbase /tmp/pocketbase.zip \
+    && apk del unzip
+
+FROM alpine:latest
+
+RUN apk add --no-cache bash tini
+ENTRYPOINT ["/sbin/tini", "--"]
 
 ENV PB_DEBUG=
 ENV PB_HOST=0.0.0.0
@@ -32,6 +35,8 @@ ENV PB_ENCRYPTION_KEY=
 
 EXPOSE ${PB_PORT}
 VOLUME ["${PB_DATA_DIR}"]
+
+COPY --from=pocketbase /usr/bin/pocketbase /usr/bin/pocketbase
 
 ADD rootfs /
 RUN chmod +x /entrypoint.sh
