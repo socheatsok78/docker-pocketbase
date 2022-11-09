@@ -29,6 +29,8 @@ services:
     configs:
       - source: litestream.yml
         target: /etc/litestream.yml
+    depends_on:
+      - minio
 
   minio:
     image: minio/minio
