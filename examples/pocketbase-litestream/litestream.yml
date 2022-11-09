@@ -1,0 +1,10 @@
+dbs:
+  - path: /data/data.db
+    replicas:
+      - type: s3
+        bucket: pocketbase
+        endpoint: http://minio:9000
+        skip-verify: true
+        region: us-east1
+        access-key-id: minioadmin
+        secret-access-key: minioadmin

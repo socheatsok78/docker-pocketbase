@@ -1,0 +1,41 @@
+configs:
+  litestream.yml:
+    file: litestream.yml
+
+networks:
+  minio: {}
+
+volumes:
+  pocketbase-data: {}
+  minio-data: {}
+
+services:
+  pocketbase:
+    image: pocketbase/pocketbase:edge
+    ports:
+      - 8090:8090
+    environment:
+      PB_ENCRYPTION_KEY: "ZWNhZTc0ZTI5YTZlZGZiMGJhZjdlNWE4"
+    volumes:
+      - pocketbase-data:/opt/pocketbase
+
+  litestream:
+    image: litestream/litestream
+    command: replicate
+    volumes:
+      - pocketbase-data:/data
+    networks:
+      - minio
+    configs:
+      - source: litestream.yml
+        target: /etc/litestream.yml
+
+  minio:
+    image: minio/minio
+    command: server /data --console-address ":9001"
+    ports:
+      - 9001:9001
+    volumes:
+      - minio-data:/data
+    networks:
+      - minio
