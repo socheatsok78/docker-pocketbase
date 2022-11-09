@@ -6,6 +6,8 @@
 
 <p align="center">
     An unofficial Docker Image for <a href="https://github.com/pocketbase/pocketbase">PocketBase</a>
+    <br \>
+    <code>Psst! I stole the banner from the official repo 😂</code>
 </p>
 
 ## Overview
