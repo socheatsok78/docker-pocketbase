@@ -12,7 +12,7 @@ We’ll use a Docker compose of PocketBase, Litestream and MinIO for this exampl
 
 First, start the cluster:
 ```sh
-docker compose -f "compose.yml" up -d
+docker compose up -d
 ```
 
 Then open a web browser to http://localhost:9001/ and enter the default credentials:
