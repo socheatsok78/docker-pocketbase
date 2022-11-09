@@ -4,6 +4,7 @@ volumes:
 services:
   pocketbase:
     image: pocketbase/pocketbase:edge
+    restart: unless-stopped
     ports:
       - 8090:8090
     environment:

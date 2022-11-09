@@ -12,6 +12,7 @@ volumes:
 services:
   pocketbase:
     image: pocketbase/pocketbase:edge
+    restart: unless-stopped
     ports:
       - 8090:8090
     environment:
@@ -22,6 +23,7 @@ services:
   litestream:
     image: litestream/litestream
     command: replicate
+    restart: unless-stopped
     volumes:
       - pocketbase-data:/data
     configs:
@@ -33,6 +35,7 @@ services:
   minio:
     image: minio/minio
     command: server /data --console-address ":9001"
+    restart: unless-stopped
     ports:
       - 9001:9001
     volumes:
