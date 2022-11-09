@@ -8,3 +8,15 @@ dbs:
         region: us-east1
         access-key-id: minioadmin
         secret-access-key: minioadmin
+
+  # This is an optional config
+  # It is up to you whether to include the PocketBase Logs Database
+  - path: /data/logs.db
+    replicas:
+      - type: s3
+        bucket: pocketbase
+        endpoint: http://minio:9000
+        skip-verify: true
+        region: us-east1
+        access-key-id: minioadmin
+        secret-access-key: minioadmin
