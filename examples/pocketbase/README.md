@@ -5,7 +5,7 @@ Example for running PocketBase using Docker Compose.
 ## Getting Started
 
 Running the container:
-```sh
+```
 docker compose up -d
 
   ____            _        _   ____
