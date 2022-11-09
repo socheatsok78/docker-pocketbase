@@ -24,8 +24,6 @@ services:
     command: replicate
     volumes:
       - pocketbase-data:/data
-    networks:
-      - minio
     configs:
       - source: litestream.yml
         target: /etc/litestream.yml
@@ -39,5 +37,3 @@ services:
       - 9001:9001
     volumes:
       - minio-data:/data
-    networks:
-      - minio

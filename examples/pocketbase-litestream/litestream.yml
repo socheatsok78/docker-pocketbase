@@ -1,3 +1,6 @@
+access-key-id: minioadmin
+secret-access-key: minioadmin
+
 dbs:
   - path: /data/data.db
     replicas:
@@ -6,8 +9,7 @@ dbs:
         endpoint: http://minio:9000
         skip-verify: true
         region: us-east1
-        access-key-id: minioadmin
-        secret-access-key: minioadmin
+
 
   # This is an optional config
   # It is up to you whether to include the PocketBase Logs Database
@@ -18,5 +20,3 @@ dbs:
         endpoint: http://minio:9000
         skip-verify: true
         region: us-east1
-        access-key-id: minioadmin
-        secret-access-key: minioadmin
