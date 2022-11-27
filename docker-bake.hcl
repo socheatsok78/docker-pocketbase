@@ -1,5 +1,5 @@
 variable "POCKETBASE_VERSION" {
-  default = "0.7.10"
+  default = "0.8.0"
 }
 
 target "docker-metadata-action" {}
